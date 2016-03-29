@@ -14,7 +14,7 @@
 }
 
 .flash_notice {
-  @extend .alert-success
+  @extend .alert-success;
 }
 
 #error_explanation {
@@ -66,7 +66,7 @@
 
   @media (min-width: 769px) {
     #utility_nav {
-      @extend .pull-right;
+      float: right;
     }
   }
 
