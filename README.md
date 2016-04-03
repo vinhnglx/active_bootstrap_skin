@@ -15,7 +15,9 @@ gem 'active_bootstrap_skin'
 
 ## Usage
 
-- In the `active_admin.css.css` file, you include `active_bootstrap_skin`. **Note: You have to comment the active admin stylesheets.**
+- Don't forget you have to config the [bootstraps-sass](https://github.com/twbs/bootstrap-sass#a-ruby-on-rails) first.
+
+- In the `active_admin.scss` file, you include `active_bootstrap_skin`. **Note: You have to comment the active admin stylesheets.**
 
 ```
 // Active Admin's got SASS!
