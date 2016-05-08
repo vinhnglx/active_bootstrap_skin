@@ -90,6 +90,16 @@
   .header-item.tab {
     @extend .col-sm-3
   }
+
+  .header-item li.has_nested {
+    @extend .dropdown;
+    > a {
+      @extend .dropdown-toggle;
+    }
+    > ul {
+      @extend .dropdown-menu;
+    }
+  }
 }
 
 #title_bar {
