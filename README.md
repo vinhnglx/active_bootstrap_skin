@@ -28,6 +28,15 @@ gem 'active_bootstrap_skin'
 @import "active_bootstrap_skin";
 ```
 
+- In the `active_admin.js.coffee` file, you require `active_bootstrap_skin`.
+
+```
+#= require active_admin/base
+
+// Active Bootstrap
+#= require active_bootstrap_skin
+```
+
 ## Screens
 
 ![Login](https://cloud.githubusercontent.com/assets/1997137/14111523/49c1e80c-f5f5-11e5-9fd4-d1700428b167.png)
