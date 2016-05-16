@@ -19,13 +19,22 @@ gem 'active_bootstrap_skin'
 
 - In the `active_admin.scss` file, you include `active_bootstrap_skin`. **Note: You have to comment the active admin stylesheets.**
 
-```
+```css
 // Active Admin's got SASS!
 // @import "active_admin/mixins";
 // @import "active_admin/base";
 
 // Active Bootstrap
 @import "active_bootstrap_skin";
+```
+
+- In the `active_admin.js` file, you require `active_bootstrap_skin`.
+
+```javascript
+//= require active_admin/base
+//= require bootstrap-sprockets
+
+//= require active_bootstrap_skin
 ```
 
 ## Screens
