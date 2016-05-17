@@ -2,6 +2,12 @@
 
 #wrapper {
   @extend .container-fluid;
+  padding-left: 0px;
+  padding-right: 0px;
+  div {
+    padding-left: 5px;
+    padding-right: 5px;
+  }
 }
 
 .flash {
@@ -14,7 +20,7 @@
 }
 
 .flash_notice {
-  @extend .alert-success;
+  @extend .alert-success
 }
 
 #error_explanation {
@@ -49,10 +55,31 @@
 #header {
   @extend .navbar;
   @extend .navbar-inverse;
+  border-radius: 0px;
+
+  .mobile {
+    display: none;
+  }
 
   @media (max-width: 768px) {
+    .button_mobile_burger {
+      margin-top: 0;
+    }
+
     #site_title {
-      float: none;
+      float: left;
+    }
+
+    #utility_nav {
+      display: none;
+    }
+
+    #tabs {
+      clear: both;
+    }
+
+    .mobile {
+      display: block;
     }
 
     .header-item.tabs {
@@ -81,9 +108,7 @@
     @extend .nav;
     @extend .navbar-nav;
 
-    li.current {
-      @extend .active;
-    }
+    li.current { @extend .active; }
   }
 
 
@@ -114,19 +139,12 @@
   .filter_form_field {
     @extend .form-group;
 
-    input,select {
-      @extend .form-control;
-    }
+    input,select { @extend .form-control; }
   }
 
   .buttons {
-    input, a {
-      @extend .btn;
-      @extend .btn-default;
-    }
-    input[type="submit"] {
-      @extend .btn-primary;
-    }
+    input, a { @extend .btn; @extend .btn-default; }
+    input[type="submit"] { @extend .btn-primary; }
   }
 }
 
@@ -135,17 +153,13 @@
   @extend .row;
 
   &.without_sidebar {
-    #main_content_wrapper {
-      @extend .col-lg-6;
-    }
+    #main_content_wrapper { @extend .col-md-6; }
   }
 
   &.with_sidebar {
-    #main_content_wrapper {
-       @extend .col-lg-9;
-    }
+    #main_content_wrapper { @extend .col-md-9; }
     #sidebar {
-      @extend .col-lg-3;
+      @extend .col-md-3;
       input {
         margin-top: 10px;
       }
@@ -183,11 +197,11 @@
   }
 
   .ui-datepicker-prev {
-    @extend .pull-left;
+    float: left;
   }
 
   .ui-datepicker-next {
-    @extend .pull-right;
+    float: right;
   }
 
   .ui-datepicker-today {
@@ -201,15 +215,14 @@
 }
 
 /* Tables */
-.index_table {
-  @extend .table;
-}
-.attributes_table table {
-  @extend .table;
-}
+.index_as_table { @extend .table-responsive; }
+.index_table      { @extend .table; }
+.attributes_table table { @extend .table; }
 
 /* Forms */
 form {
+  //@extend form[role="form"];
+
   .inputs, .actions {
     ol {
       padding-left: 0;
@@ -239,6 +252,7 @@ form {
   }
 
   label.label {
+    /* The label class has a different meaning in bootstrap */
     display: inline-block;
     font-weight: bold;
 
