@@ -45,6 +45,10 @@ gem 'active_bootstrap_skin'
 
 ![Admin Responsive](https://cloud.githubusercontent.com/assets/1997137/14111613/8fd64eb4-f5f5-11e5-9024-0d0dbf4c4b88.png)
 
+![Admin viewport](https://cloud.githubusercontent.com/assets/1997137/15280259/d47272f4-1b58-11e6-86e8-b35836557890.png)
+
+![Admin dropdown](https://cloud.githubusercontent.com/assets/1997137/15280303/57980aea-1b59-11e6-9cda-b58573a03f84.png)
+
 ## Contributing
 
 Bug reports and pull requests are welcome on GitHub at https://github.com/vinhnglx/active_bootstrap_skin. This project is intended to be a safe, welcoming space for collaboration, and contributors are expected to adhere to the [Contributor Covenant](http://contributor-covenant.org/) code of conduct.
