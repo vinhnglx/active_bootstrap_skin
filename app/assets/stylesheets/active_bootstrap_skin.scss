@@ -179,6 +179,19 @@
   }
 }
 
+ul.scopes {
+  li.scope {
+    display: inline-block;
+    list-style-type: none;
+    margin-bottom: 4px;
+  }
+  li.scope a{ @extend .btn; @extend .btn-default; }
+  li.scope.selected a { @extend .btn-primary; }
+}
+
+
+
+
 #ui-datepicker-div {
   background: white;
   padding: 5px;
