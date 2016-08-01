@@ -1,5 +1,7 @@
 # ActiveBootstrapSkin
 
+[![Codewake](https://www.codewake.com/badges/ask_question_flat_square.svg)](https://www.codewake.com/p/active-bootstrap-skin)
+
 Bootstrap skin for Active Admin.
 
 ## Installation
