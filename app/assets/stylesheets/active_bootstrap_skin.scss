@@ -16,13 +16,13 @@
 }
 
 .flash_notice {
-  @extend .alert-success
+  @extend .alert-success;
 }
 
 #error_explanation {
   color: red;
   h2 {
-    font-size: 15px
+    font-size: 15px;
   }
 }
 
@@ -93,7 +93,6 @@
     }
   }
 
-
   #site_title {
     @extend .navbar-brand;
     margin-top:    0;
@@ -107,9 +106,8 @@
     li.current { @extend .active; }
   }
 
-
   .header-item.tab {
-    @extend .col-sm-3
+    @extend .col-sm-3;
   }
 }
 
