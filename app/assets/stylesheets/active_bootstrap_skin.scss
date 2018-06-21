@@ -273,3 +273,19 @@ form {
     border-radius: inherit;
   }
 }
+
+/* Display of checkboxes and radios */
+
+.check_boxes {
+  @extend .checkbox;
+}
+
+.check_boxes, .radio {
+  label {
+    font-weight: normal;
+  }
+
+  legend label {
+    padding: 0;
+  }
+}
