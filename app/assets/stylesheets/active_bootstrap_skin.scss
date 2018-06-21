@@ -6,6 +6,26 @@
   padding-right: 0px;
 }
 
+//apply bootstrap panel style to .panel
+.panel {
+  @extend .panel-default;
+
+  > h3 {
+    @extend .panel-heading;
+
+    padding-top: 7px;
+    margin: 0;
+
+    a {
+      color: $panel-default-text;
+    }
+  }
+}
+
+.panel_contents {
+  @extend .panel-body;
+}
+
 .flash {
   @extend .alert;
   margin-top: 30px;
