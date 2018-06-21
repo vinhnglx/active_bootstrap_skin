@@ -23,14 +23,14 @@
 }
 
 #error_explanation {
-  color: red;
+  color: $state-danger-text;
   h2 {
     font-size: 15px;
   }
 }
 
 .inline-errors {
-  color: red;
+  color: $state-danger-text;
 }
 
 #login {
@@ -297,6 +297,10 @@ form {
     white-space: inherit;
     vertical-align: inherit;
     border-radius: inherit;
+  }
+
+  &.formtastic .errors {
+    color: $state-danger-text;
   }
 }
 
