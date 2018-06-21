@@ -274,6 +274,13 @@ form {
   }
 }
 
+legend.label {
+  @extend legend;
+  text-align: left;
+  border-radius: 0;
+  margin-bottom: 10px;
+}
+
 /* Display of checkboxes and radios */
 
 .check_boxes {
