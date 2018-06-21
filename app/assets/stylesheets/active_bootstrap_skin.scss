@@ -273,3 +273,26 @@ form {
     border-radius: inherit;
   }
 }
+
+// style filter forms
+.filter_form {
+  .buttons {
+    input, a {
+      margin-right: 5px;
+    }
+
+    a {
+      margin-top: 10px;
+    }
+  }
+  .filter_form_field, form .inputs li {
+    select[multiple] {
+      height: auto;
+    }
+
+    input[type="radio"] {
+      height: auto;
+      width: auto;
+    }
+  }
+}
