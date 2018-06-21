@@ -152,12 +152,7 @@
 
   &.with_sidebar {
     #main_content_wrapper { @extend .col-md-9; }
-    #sidebar {
-      @extend .col-md-3;
-      input {
-        margin-top: 10px;
-      }
-    }
+    #sidebar { @extend .col-md-3; }
   }
 }
 
@@ -274,8 +269,17 @@ form {
   }
 }
 
-// style filter forms
+// style filter form
 .filter_form {
+
+  input {
+    margin-top: 10px;
+  }
+
+  label input {
+    margin-top: 5px;
+  }
+
   .buttons {
     input, a {
       margin-right: 5px;
@@ -285,7 +289,9 @@ form {
       margin-top: 10px;
     }
   }
+
   .filter_form_field, form .inputs li {
+
     select[multiple] {
       height: auto;
     }
