@@ -310,3 +310,26 @@ form {
   padding-bottom: 20px;
   background-color: #9da5a4;
 }
+
+legend.label {
+  @extend legend;
+  text-align: left;
+  border-radius: 0;
+  margin-bottom: 10px;
+}
+
+/* Display of checkboxes and radios */
+
+.check_boxes {
+  @extend .checkbox;
+}
+
+.check_boxes, .radio {
+  label {
+    font-weight: normal;
+  }
+
+  legend label {
+    padding: 0;
+  }
+}
