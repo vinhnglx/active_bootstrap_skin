@@ -1,0 +1,124 @@
+#header
+  z-index: 1
+
+.panel .container
+  padding: 0
+  width: 100%
+
+#wrapper
+  margin: 0 auto
+  overflow: hidden
+  max-width: 1600px
+  min-width: 970px
+
+#active_admin_content
+  &.with_sidebar
+    display: flex
+    #sidebar
+      padding: 0
+      flex: 0 0 280px
+    #main_content_wrapper
+      width: auto
+      flex: 1
+      padding-right: 20px
+      .admin_items &
+        padding-right: 70px
+
+.table, .attributes_table table, #main_content table
+  min-width: 400px
+
+.btn-default.active
+  color: $btn-active-color
+  background-color: $btn-active-bg
+  border-color: $btn-active-border
+  box-shadow: none
+  &:focus, &:hover
+    color: $btn-active-color !important
+    background-color: $btn-active-bg !important
+  &.disabled, &[disabled], fieldset[disabled] &
+    border-color: $btn-active-disabled-bg
+    background-color: $btn-active-disabled-bg !important
+    &:focus, &:hover
+      background-color: $btn-active-disabled-bg !important
+
+.input-group-addon
+  color: $btn-default-color
+  .disabled &
+    border: none !important
+    background-color: $btn-default-disabled-bg
+
+.btn
+  &:focus
+    outline: none !important
+    background-color: $btn-default-bg !important
+  &:hover
+    color: $btn-default-color !important
+    background-color: $btn-default-hover-bg !important
+  &.disabled, &[disabled], fieldset[disabled] &
+    @include opacity(1)
+    border-color: $btn-default-disabled-bg
+    background-color: $btn-default-disabled-bg
+    &:focus, &:hover
+      background-color: $btn-default-disabled-bg !important
+
+.form-control
+  &[disabled], &[readonly], fieldset[disabled] &
+    border: none
+
+input.form-control, .filter_form .buttons input, form .actions li input
+  &[disabled]
+    padding: 4px 9px
+    color: $btn-default-color
+    &:hover, &:focus
+      color: $btn-default-color
+
+// panels
+#sidebar
+  .panel-body
+    padding: 10px
+  h3
+    font-size: 18px
+    padding-top: 9px
+    padding-bottom: 9px
+  h4
+    font-size: 14px
+  label
+    margin: 5px 0 0
+  .form-group, .filter_form .filter_form_field, .filter_form .filter_form_field, form .inputs li, form .inputs li, .filter_form .filter_form_field, form .inputs li, .buttons
+    margin-bottom: 10px
+  select, textarea
+    margin-top: 10px
+  .panel_contents
+    ul
+      list-style-position: inside
+
+.panel .panel .panel-heading
+  padding: 5px 10px
+
+.panel-default > .panel-heading
+  border-bottom: none
+
+.panel-footer
+  border-top: none
+
+ul
+  padding: 0
+
+.resources
+  list-style: none
+  li
+    display: inline
+    padding-right: 10px
+    &:last-child
+      padding-right: 0
+
+#main_content form
+  max-width: 785px //50% of max content width
+  &#collection_selection //special form for active admin batch actions
+    max-width: none
+
+// table-tools
+
+.table_tools
+  .batch_actions_selector .dropdown_menu_button, .index
+    @extend .btn-lg

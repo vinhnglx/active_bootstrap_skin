@@ -1,3 +1,4 @@
+@import 'emjot_variables';
 @import 'bootstrap';
 
 /* set horizontal padding on all content containers */
@@ -527,3 +528,6 @@ legend.label {
     }
   }
 }
+
+@import 'emjot_mods';
+@import 'emjot_theme';

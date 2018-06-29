@@ -1,0 +1,66 @@
+/*!
+ * Bootstrap v3.3.7 (http://getbootstrap.com)
+ * Copyright 2011-2016 Twitter, Inc.
+ * Licensed under MIT (https://github.com/twbs/bootstrap/blob/master/LICENSE)
+
+//
+// Load core variables and mixins
+// --------------------------------------------------
+@import url('https://fonts.googleapis.com/css?family=Open+Sans:400,600,700')
+
+body
+  font-family: 'Open Sans', sans-serif
+  font-weight: normal
+
+h1, h2, h3, h4, h5, h6, .h1, .h2, .h3, .h4, .h5, .h6
+  font-weight: bold
+
+.panel-heading a
+  &:hover, &:focus
+    text-decoration: none
+    cursor: pointer
+
+.list-group-item
+  border: none
+  padding: 8px 8px
+  &:nth-child(odd)
+    background-color: $list-group-bg-alternate
+
+form label.label, label, .label, th
+  font-weight: 600
+
+.progress-striped .progress-bar, .progress-bar-striped
+  +gradient-striped($steel)
+  box-shadow: none
+
+.progress
+  box-shadow: none
+
+.inline-hints
+  padding-top: 5px
+  color: $steel-dark
+  font-weight: 600
+
+//Dashboard
+
+#main_content .index_grid
+  > tbody > tr > td
+    border: none
+    &:first-child
+      padding-left: 0
+    &:last-child
+      padding-right: 0
+  .panel
+    margin-bottom: 0
+    min-width: 280px
+
+.btn:active
+  box-shadow: inset 0 0 100px rgba(0, 0, 0, 0.05)
+
+.dropdown-menu
+  box-shadow: none
+  > li > a
+    padding: $padding-base-vertical $padding-base-horizontal
+
+.dropup .caret
+  margin-bottom: 4px
