@@ -1,9 +1,12 @@
 @import 'bootstrap';
 
+/* set horizontal padding on all content containers */
+#title_bar, .flashes, .logged_out #content_wrapper, #footer {
+  @include container-fixed;
+}
+
 #wrapper {
-  @extend .container-fluid;
-  padding-left: 0px;
-  padding-right: 0px;
+  @include container-fluid(0);
 }
 
 .flash {
@@ -20,14 +23,14 @@
 }
 
 #error_explanation {
-  color: red;
+  color: $state-danger-text;
   h2 {
     font-size: 15px;
   }
 }
 
 .inline-errors {
-  color: red;
+  color: $state-danger-text;
 }
 
 #login {
@@ -51,7 +54,7 @@
 #header {
   @extend .navbar;
   @extend .navbar-inverse;
-  border-radius: 0px;
+  border-radius: 0;
 
   .mobile {
     display: none;
@@ -113,6 +116,7 @@
 
 #title_bar {
   @extend .clearfix;
+  margin-bottom: 10px;
 
   #titlebar_left {
     @extend .pull-left;
@@ -145,9 +149,15 @@
 /* Main Content */
 #active_admin_content {
   @extend .row;
+  margin: 0;
+  padding-bottom: 30px;
 
   &.without_sidebar {
-    #main_content_wrapper { @extend .col-md-6; }
+    #main_content_wrapper {
+      @extend .col-md-6;
+      width: auto;
+      min-width: 100%;
+    }
   }
 
   &.with_sidebar {
@@ -159,9 +169,17 @@
       }
     }
   }
+
+  table {
+    width: auto;
+  }
 }
 
 #main_content_wrapper {
+  padding-bottom: 40px;
+  /* make extra wide content accessible */
+  overflow-x: auto;
+
   .member_link {
     margin-right: 10px;
   }
@@ -171,6 +189,10 @@
     height: auto;
     margin-right: 10px;
   }
+}
+
+#main_content table {
+  @extend .table;
 }
 
 ul.scopes {
@@ -183,8 +205,12 @@ ul.scopes {
   li.scope.selected a { @extend .btn-primary; }
 }
 
-
-
+/* breadcrumb */
+.breadcrumb {
+  /* the typical bootstrap look for .breadcrumb does not fit in the active admin layout */
+  padding: 0;
+  border-radius: 0;
+}
 
 #ui-datepicker-div {
   background: white;
@@ -271,5 +297,39 @@ form {
     white-space: inherit;
     vertical-align: inherit;
     border-radius: inherit;
+  }
+
+  &.formtastic .errors {
+    color: $state-danger-text;
+  }
+}
+
+/* Footer */
+#footer {
+  padding-top: 30px;
+  padding-bottom: 20px;
+  background-color: #9da5a4;
+}
+
+legend.label {
+  @extend legend;
+  text-align: left;
+  border-radius: 0;
+  margin-bottom: 10px;
+}
+
+/* Display of checkboxes and radios */
+
+.check_boxes {
+  @extend .checkbox;
+}
+
+.check_boxes, .radio {
+  label {
+    font-weight: normal;
+  }
+
+  legend label {
+    padding: 0;
   }
 }
