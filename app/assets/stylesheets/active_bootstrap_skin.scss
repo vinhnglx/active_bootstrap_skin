@@ -6,7 +6,7 @@
 }
 
 #wrapper {
-  @include container-fluid(0);
+  @include container-fixed(0);
 }
 
 .flash {
