@@ -322,6 +322,47 @@ ul.scopes {
 .index_table      { @extend .table; }
 .attributes_table table { @extend .table; }
 
+//turn .table_actions into buttons with icons
+
+#main_content_wrapper .table_actions {
+  @extend .btn-toolbar;
+  min-width: 117px;
+
+  > .member_link {
+    margin: (-3px) 10px 0 0;
+
+    &:last-child {
+      margin-right: 0;
+    }
+  }
+}
+
+.member_link {
+  @extend .btn;
+  @extend .btn-default;
+  @extend .glyphicon;
+  font-size: 0;
+  text-align: center;
+  padding: 3px 0;
+  width: 28px;
+
+  &:before {
+    font-size: 14px;
+  }
+}
+
+.view_link {
+  @extend .glyphicon-search;
+}
+
+.edit_link {
+  @extend .glyphicon-pencil;
+}
+
+.delete_link {
+  @extend .glyphicon-trash;
+}
+
 /* Forms */
 form {
   //@extend form[role="form"];
