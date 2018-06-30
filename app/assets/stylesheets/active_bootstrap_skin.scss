@@ -478,3 +478,52 @@ legend.label {
     }
   }
 }
+
+/* table_tools */
+
+.table_tools {
+  overflow: hidden;
+  margin-bottom: 10px;
+
+  .batch_actions_selector {
+    .dropdown_menu_button {
+      @extend .btn;
+      @extend .btn-default;
+      @extend .dropdown-toggle;
+      &:after {
+        margin-left: 0.4em;
+        content: "";
+        @extend .caret;
+      }
+    }
+
+    .dropdown_menu_list {
+      @extend .dropdown-menu;
+      display: block;
+      top: auto;
+      left: auto;
+    }
+  }
+
+  .table_tools_segmented_control {
+    @extend .btn-group;
+    margin: 0 0 0 1px;
+  }
+
+  .index {
+    @extend .btn;
+    @extend .btn-default;
+
+    a {
+      color: $btn-default-color;
+
+      &:hover, &:focus {
+        text-decoration: none;
+      }
+    }
+
+    &.selected {
+      @extend .btn-default.active;
+    }
+  }
+}
