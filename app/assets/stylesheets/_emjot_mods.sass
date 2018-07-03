@@ -1,5 +1,21 @@
 #header
   z-index: 1
+  @media (max-width: 768px)
+    // modify responsive behaviour to work with min-width content
+    #utility_nav
+      display: block
+      clear: both
+      > li
+        float: left
+    .header-item.tabs.mobile
+      float: left
+      margin:
+        left: 10px
+        right: 10px
+      .button_mobile_burger
+        margin: 0
+      margin: 10px
+
 
 .panel .container
   padding: 0
