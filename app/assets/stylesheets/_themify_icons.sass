@@ -10,26 +10,26 @@
 
 @mixin themify_glyphicon($gi-name, $th-name:$gi-name)
   .glyphicon-#{$gi-name}
+    top: 0
     +themify_icon($th-name)
 
-@mixin themify_icon($th-name, $size-name: 'base')
-  $size: map-get($themify-icon-sizes, $size-name)
+@mixin themify_icon($th-name, $size:inherit)
   &:before
     @extend .glyphicon
     font-family: "Themify"
     content: map-get($themify-character-map, $th-name)
-    font-size: nth($size, 1)
-    line-height: nth($size, 2)
+    font-size: $size
 
 +font-face('Themify', 'themify', 'themify')
 
 +themify_glyphicon('pencil')
++themify_glyphicon('edit', 'pencil-alt')
 +themify_glyphicon('eye-open', 'eye')
 +themify_glyphicon('search')
 +themify_glyphicon('trash')
 +themify_glyphicon('arrow-down')
 +themify_glyphicon('arrow-up')
-//+themify_glyphicon('edit')
 +themify_glyphicon('refresh', 'reload')
 +themify_glyphicon('new-window')
 +themify_glyphicon('star')
++themify_glyphicon('check', 'check-box')
