@@ -1,0 +1,35 @@
+@import themify_map
+
+@mixin font_face($family, $path, $svg, $weight: normal, $style: normal)
+  @font-face
+    font-family: $family
+    src: url('#{$path}.eot')
+    src: url('#{$path}.eot?#iefix') format('embedded-opentype'), url('#{$path}.woff') format('woff'), url('#{$path}.ttf') format('truetype'), url('#{$path}.svg##{$svg}') format('svg')
+    font-weight: $weight
+    font-style: $style
+
+@mixin themify_glyphicon($gi-name, $th-name:$gi-name)
+  .glyphicon-#{$gi-name}
+    +themify_icon($th-name)
+
+@mixin themify_icon($th-name, $size-name: 'base')
+  $size: map-get($themify-icon-sizes, $size-name)
+  &:before
+    @extend .glyphicon
+    font-family: "Themify"
+    content: map-get($themify-character-map, $th-name)
+    font-size: nth($size, 1)
+    line-height: nth($size, 2)
+
++font-face('Themify', 'themify', 'themify')
+
++themify_glyphicon('pencil')
++themify_glyphicon('eye-open', 'eye')
++themify_glyphicon('search')
++themify_glyphicon('trash')
++themify_glyphicon('arrow-down')
++themify_glyphicon('arrow-up')
+//+themify_glyphicon('edit')
++themify_glyphicon('refresh', 'reload')
++themify_glyphicon('new-window')
++themify_glyphicon('star')
