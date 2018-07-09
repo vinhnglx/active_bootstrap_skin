@@ -523,7 +523,8 @@ legend.label {
     }
 
     &.selected {
-      @extend .btn-default.active;
+      @extend .btn-default;
+      @extend .active;
     }
   }
 }
