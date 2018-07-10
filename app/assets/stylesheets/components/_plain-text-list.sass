@@ -1,0 +1,16 @@
+.plain-text-list
+  li
+    margin-bottom: 10px
+    &:last-child
+      margin-bottom: 0
+
+ol.plain-text-list
+  list-style: none
+  counter-reset: plain-text-list
+  padding-left: 25px
+  li:before
+    content: counter(plain-text-list)'.'
+    counter-increment: plain-text-list
+    display: inline-block
+    margin-left: -25px
+    width: 25px
