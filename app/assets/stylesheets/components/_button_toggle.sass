@@ -1,0 +1,63 @@
+// Mixin for Default Switch Styles
+// Variables: $size, $margin, $color, $bg, $active-bg, $font-size
+@mixin toggle-size($size: 24px)
+  height: $size
+  width: $size * 2
+  border-radius: $size
+
+  &:focus,
+  &.focus
+    &,
+    &.active
+      outline: none
+
+  > .btn-toggle-handle
+    top: ($size * 0.25) / 2 - 1px
+    left: ($size * 0.25) / 2 - 1px
+    width: $size * 0.75
+    height: $size * 0.75
+    border-radius: $size * 0.75
+
+  &.active > .btn-toggle-handle
+    left: $size + (($size * 0.25) / 2) - 1px
+
+.btn-toggle
+  @extend .btn-default
+  background: $toggle-inactive-bg
+  padding: 0
+  position: relative
+
+  &:focus,
+  &.focus
+    &,
+    &.active
+      outline: none
+
+  > .btn-toggle-handle
+    @extend .btn
+    @extend .btn-default
+    position: absolute
+    transition: left 0.25s
+
+  &.active
+    background-color: $toggle-active-bg
+    border-color: $btn-default-border
+    transition: background-color 0.25s
+    > .btn-toggle-handle
+      transition: left 0.25s
+
+  +toggle-size()
+
+// Apply Mixin to different sizes & colors
+.btn-toggle
+  .index_table &
+    margin: -1px 20px 0 0
+
+  &.btn-lg
+    +toggle-size(40px)
+
+  &.btn-sm
+    +toggle-size(20px)
+
+  &.btn-xs
+    +toggle-size(16px)
