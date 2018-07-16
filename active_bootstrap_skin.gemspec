@@ -23,4 +23,5 @@ Gem::Specification.new do |spec|
   spec.add_development_dependency "rake", "~> 10.0"
 
   spec.add_runtime_dependency "bootstrap-sass", "~> 3.3.6"
+  spec.add_runtime_dependency "sass-rails"
 end
