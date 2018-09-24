@@ -214,6 +214,10 @@
     @extend .form-group;
 
     input,select { @extend .form-control; }
+
+    select[multiple] {
+      height: auto;
+    }
   }
 
   .buttons {
@@ -385,6 +389,10 @@ form {
       @extend .form-group;
 
       input,select,textarea { @extend .form-control; }
+
+      select[multiple] {
+        height: auto;
+      }
     }
   }
 
