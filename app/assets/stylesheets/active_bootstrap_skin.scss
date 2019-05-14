@@ -341,7 +341,7 @@ ul.scopes {
   }
 }
 
-.member_link {
+.member_link, .ui-sortable-handle {
   @extend .btn;
   @extend .btn-default;
   @extend .glyphicon;
@@ -353,6 +353,11 @@ ul.scopes {
   &:before {
     font-size: 14px;
   }
+}
+
+.ui-sortable-handle {
+  @extend .glyphicon-sort;
+  cursor: all-scroll;
 }
 
 .view_link {
