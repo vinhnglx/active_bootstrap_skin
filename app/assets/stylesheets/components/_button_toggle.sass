@@ -1,3 +1,5 @@
+@use "sass:math"
+
 // Mixin for Default Switch Styles
 // Variables: $size, $margin, $color, $bg, $active-bg, $font-size
 @mixin toggle-size($size: 24px)
@@ -12,14 +14,14 @@
       outline: none
 
   > .btn-toggle-handle
-    top: ($size * 0.25) / 2 - 1px
-    left: ($size * 0.25) / 2 - 1px
+    top: math.div($size * 0.25, 2) - 1px
+    left: math.div($size * 0.25, 2) - 1px
     width: $size * 0.75
     height: $size * 0.75
     border-radius: $size * 0.75
 
   &.active > .btn-toggle-handle
-    left: $size + (($size * 0.25) / 2) - 1px
+    left: $size + math.div($size * 0.25, 2) - 1px
 
 .btn-toggle
   @extend .btn-default
