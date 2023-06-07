@@ -1,6 +1,4 @@
-# ActiveBootstrapSkin
-
-[![Codewake](https://www.codewake.com/badges/ask_question_flat_square.svg)](https://www.codewake.com/p/active-bootstrap-skin)
+# ActiveBootstrapSkin (emjot's Fork)
 
 Bootstrap skin for Active Admin.
 
@@ -9,9 +7,11 @@ Bootstrap skin for Active Admin.
 - Add the gem to your Gemfile:
 
 ```
-# Note: The gem require the bootstrap-sass gem. So we need to add bootstrap-sass to Gemfile
+# Note: The gem requires the bootstrap-sass gem, but without sassc - so add this emjot fork/branch to the Gemfile:
+gem 'bootstrap-sass',
+  git:    'https://github.com/emjot/bootstrap-sass',
+  branch: 'remove-sassc'
 
-gem 'bootstrap-sass'
 gem 'active_bootstrap_skin'
 ```
 
@@ -21,13 +21,10 @@ gem 'active_bootstrap_skin'
 
 - In the `active_admin.scss` file, you include `active_bootstrap_skin`. **Note: You have to comment the active admin stylesheets.**
 
-```css
+```scss
 // Active Admin's got SASS!
-// @import "active_admin/mixins";
-// @import "active_admin/base";
-
-// Active Bootstrap
-@import "active_bootstrap_skin";
+@use "bootstrap-sprockets";
+@use "active_bootstrap_skin";
 ```
 
 - In the `active_admin.js` file, you require `active_bootstrap_skin`.
@@ -51,6 +48,3 @@ gem 'active_bootstrap_skin'
 
 ![Admin dropdown](https://cloud.githubusercontent.com/assets/1997137/15280303/57980aea-1b59-11e6-9cda-b58573a03f84.png)
 
-## Contributing
-
-Bug reports and pull requests are welcome on GitHub at https://github.com/vinhnglx/active_bootstrap_skin. This project is intended to be a safe, welcoming space for collaboration, and contributors are expected to adhere to the [Contributor Covenant](http://contributor-covenant.org/) code of conduct.
