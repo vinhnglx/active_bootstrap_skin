@@ -12,17 +12,23 @@ gem 'bootstrap-sass',
   git:    'https://github.com/emjot/bootstrap-sass',
   branch: 'remove-sassc'
 
-gem 'active_bootstrap_skin'
+gem 'active_bootstrap_skin', 
+  git:    'https://github.com/emjot/active_bootstrap_skin',
+  branch: 'emjot' # or e.g. "tag: 'emjot-2.2.0'"
 ```
 
 ## Usage
 
 - Don't forget you have to config the [bootstraps-sass](https://github.com/twbs/bootstrap-sass#a-ruby-on-rails) first.
 
-- In the `active_admin.scss` file, you include `active_bootstrap_skin`. **Note: You have to comment the active admin stylesheets.**
+- In the `active_admin.scss` file, you include `active_bootstrap_skin`. **Note: You have to comment out or remove the active admin stylesheets.**
 
 ```scss
 // Active Admin's got SASS!
+// @use "active_admin/mixins";
+// @use "active_admin/base";
+
+// Active Bootstrap
 @use "bootstrap-sprockets";
 @use "active_bootstrap_skin";
 ```
