@@ -1,0 +1,19 @@
+// Compatibility helper functions for sprockets in conjunction with dartsass-rails.
+//
+// If you use dartsass-rails, add '@import "bootstrap-sprockets-dartsass";'
+// before you import bootstrap (i.e. in this case before you import active_bootstrap_skin).
+//
+// These helpers work similar to the "bootstrap-sprockets" helpers but differ in the way that
+// dartsass-rails can't process "asset-path()" and similar functions; it relies
+// on sprockets-rails to preprocess url() function contents with correct & fingerprinted
+// paths (see also sprockets-rails' config.assets.resolve_assets_in_css_urls option).
+
+@function twbs-font-path($path) {
+  @return $path
+}
+
+@function twbs-image-path($path) {
+  @return $path
+}
+
+$bootstrap-sass-asset-helper: true;

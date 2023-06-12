@@ -3,8 +3,8 @@
 @mixin font_face($family, $path, $svg, $weight: normal, $style: normal)
   @font-face
     font-family: $family
-    src: asset-url('#{$path}.eot')
-    src: asset-url('#{$path}.eot?#iefix') format('embedded-opentype'), asset-url('#{$path}.woff') format('woff'), asset-url('#{$path}.ttf') format('truetype'), asset-url('#{$path}.svg##{$svg}') format('svg')
+    src: url('#{$path}.eot')
+    src: url('#{$path}.eot?#iefix') format('embedded-opentype'), url('#{$path}.woff') format('woff'), url('#{$path}.ttf') format('truetype'), url('#{$path}.svg##{$svg}') format('svg')
     font-weight: $weight
     font-style: $style
 

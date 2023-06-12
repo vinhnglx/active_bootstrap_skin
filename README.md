@@ -25,12 +25,12 @@ gem 'active_bootstrap_skin',
 
 ```scss
 // Active Admin's got SASS!
-// @use "active_admin/mixins";
-// @use "active_admin/base";
+// @import "active_admin/mixins";
+// @import "active_admin/base";
 
 // Active Bootstrap
-@use "bootstrap-sprockets";
-@use "active_bootstrap_skin";
+@import "bootstrap-sprockets-dartsass"; // <-- add this line if you use dartsass-rails
+@import "active_bootstrap_skin";
 ```
 
 - In the `active_admin.js` file, you require `active_bootstrap_skin`.
