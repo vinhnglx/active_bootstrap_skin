@@ -14,14 +14,14 @@ gem 'bootstrap-sass',
 
 gem 'active_bootstrap_skin', 
   git:    'https://github.com/emjot/active_bootstrap_skin',
-  branch: 'emjot' # or e.g. "tag: 'emjot-2.2.0'"
+  branch: 'emjot' # or e.g. "tag: 'emjot-2.3.1'"
 ```
 
 ## Usage
 
 - Don't forget you have to config the [bootstraps-sass](https://github.com/twbs/bootstrap-sass#a-ruby-on-rails) first.
 
-- In the `active_admin.scss` file, you include `active_bootstrap_skin`. **Note: You have to comment out or remove the active admin stylesheets.**
+- In the `active_admin.scss` file, you include `active_bootstrap_skin`. If you use dartsass-rails, you will also need to include `bootstrap-sprockets-dartsass` before (and your sprockets-rails gem version is expected to be >= 3.4.2). **Note: You have to comment out or remove the active admin stylesheets.**
 
 ```scss
 // Active Admin's got SASS!
