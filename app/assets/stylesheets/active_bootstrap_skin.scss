@@ -1,8 +1,11 @@
-@import 'emjot_variables';
-@import 'bootstrap';
+@import "emjot_variables";
+@import "bootstrap";
 
 /* set horizontal padding on all content containers */
-#title_bar, .flashes, .logged_out #content_wrapper, #footer {
+#title_bar,
+.flashes,
+.logged_out #content_wrapper,
+#footer {
   @include container-fixed;
 }
 
@@ -29,7 +32,8 @@
       @include border-right-radius($border-radius-base);
     }
 
-    &:hover, &:focus {
+    &:hover,
+    &:focus {
       z-index: 2;
       color: $pagination-hover-color;
       background-color: $pagination-hover-bg;
@@ -37,7 +41,9 @@
     }
 
     &.current {
-      &, &:hover, &:focus {
+      &,
+      &:hover,
+      &:focus {
         z-index: 3;
         color: $pagination-active-color;
         background-color: $pagination-active-bg;
@@ -47,7 +53,9 @@
     }
 
     &.gap {
-      &, &:hover, &:focus {
+      &,
+      &:hover,
+      &:focus {
         color: $pagination-disabled-color;
         background-color: $pagination-disabled-bg;
         border-color: $pagination-disabled-border;
@@ -58,7 +66,8 @@
     a {
       color: $pagination-color;
 
-      &:hover, &:focus {
+      &:hover,
+      &:focus {
         text-decoration: none;
       }
     }
@@ -121,7 +130,8 @@
     margin-right: 10px;
   }
 
-  #admin_user_submit_action, input[type="submit"] {
+  #admin_user_submit_action,
+  input[type="submit"] {
     @extend .btn-block;
   }
 }
@@ -174,7 +184,7 @@
 
   #site_title {
     @extend .navbar-brand;
-    margin-top:    0;
+    margin-top: 0;
     margin-bottom: 0;
   }
 
@@ -182,7 +192,9 @@
     @extend .nav;
     @extend .navbar-nav;
 
-    li.current { @extend .active; }
+    li.current {
+      @extend .active;
+    }
   }
 
   .header-item.tab {
@@ -213,7 +225,10 @@
   .filter_form_field {
     @extend .form-group;
 
-    input,select { @extend .form-control; }
+    input,
+    select {
+      @extend .form-control;
+    }
 
     select[multiple] {
       height: auto;
@@ -221,8 +236,14 @@
   }
 
   .buttons {
-    input, a { @extend .btn; @extend .btn-default; }
-    input[type="submit"] { @extend .btn-primary; }
+    input,
+    a {
+      @extend .btn;
+      @extend .btn-default;
+    }
+    input[type="submit"] {
+      @extend .btn-primary;
+    }
   }
 }
 
@@ -241,8 +262,12 @@
   }
 
   &.with_sidebar {
-    #main_content_wrapper { @extend .col-md-9; }
-    #sidebar { @extend .col-md-3; }
+    #main_content_wrapper {
+      @extend .col-md-9;
+    }
+    #sidebar {
+      @extend .col-md-3;
+    }
   }
 
   table {
@@ -276,8 +301,13 @@ ul.scopes {
     list-style-type: none;
     margin-bottom: 4px;
   }
-  li.scope a{ @extend .btn; @extend .btn-default; }
-  li.scope.selected a { @extend .btn-primary; }
+  li.scope a {
+    @extend .btn;
+    @extend .btn-default;
+  }
+  li.scope.selected a {
+    @extend .btn-primary;
+  }
 }
 
 /* breadcrumb */
@@ -290,10 +320,11 @@ ul.scopes {
 #ui-datepicker-div {
   background: white;
   padding: 5px;
-  border: 1px solid rgba(0,0,0,0.15);
+  border: 1px solid rgba(0, 0, 0, 0.15);
   border-radius: 5px;
   .ui-datepicker-calendar {
-    th, td {
+    th,
+    td {
       width: 30px;
       height: 30px;
       text-align: center;
@@ -323,9 +354,15 @@ ul.scopes {
 }
 
 /* Tables */
-.index_as_table { @extend .table-responsive; }
-.index_table      { @extend .table; }
-.attributes_table table { @extend .table; }
+.index_as_table {
+  @extend .table-responsive;
+}
+.index_table {
+  @extend .table;
+}
+.attributes_table table {
+  @extend .table;
+}
 
 //turn .table_actions into buttons with icons
 
@@ -342,7 +379,8 @@ ul.scopes {
   }
 }
 
-.member_link, .ui-sortable-handle {
+.member_link,
+.ui-sortable-handle {
   @extend .btn;
   @extend .btn-default;
   @extend .glyphicon;
@@ -377,7 +415,8 @@ ul.scopes {
 form {
   //@extend form[role="form"];
 
-  .inputs, .actions {
+  .inputs,
+  .actions {
     ol {
       padding-left: 0;
       list-style: none;
@@ -388,7 +427,11 @@ form {
     li {
       @extend .form-group;
 
-      input,select,textarea { @extend .form-control; }
+      input,
+      select,
+      textarea {
+        @extend .form-control;
+      }
 
       select[multiple] {
         height: auto;
@@ -400,8 +443,14 @@ form {
     li {
       display: inline-block;
 
-      input, a { @extend .btn; @extend .btn-default; }
-      input[type="submit"] { @extend .btn-primary; }
+      input,
+      a {
+        @extend .btn;
+        @extend .btn-default;
+      }
+      input[type="submit"] {
+        @extend .btn-primary;
+      }
     }
   }
 
@@ -449,13 +498,21 @@ legend.label {
   @extend .checkbox;
 }
 
-.check_boxes, .radio {
+.check_boxes,
+.radio {
   label {
     font-weight: normal;
   }
 
   legend label {
     padding: 0;
+  }
+}
+
+.radio,
+.radio-inline {
+  input[type="radio"] {
+    width: auto !important;
   }
 }
 
@@ -497,7 +554,8 @@ legend.label {
     a {
       color: $btn-default-color;
 
-      &:hover, &:focus {
+      &:hover,
+      &:focus {
         text-decoration: none;
       }
     }
@@ -511,7 +569,6 @@ legend.label {
 
 // style filter form
 .filter_form {
-
   input {
     margin-top: 10px;
   }
@@ -521,7 +578,8 @@ legend.label {
   }
 
   .buttons {
-    input, a {
+    input,
+    a {
       margin-right: 5px;
     }
 
@@ -530,8 +588,8 @@ legend.label {
     }
   }
 
-  .filter_form_field, form .inputs li {
-
+  .filter_form_field,
+  form .inputs li {
     select[multiple] {
       height: auto;
     }
@@ -543,4 +601,4 @@ legend.label {
   }
 }
 
-@import 'emjot_theme';
+@import "emjot_theme";
